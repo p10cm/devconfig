@@ -1,0 +1,2 @@
+# devconfig
+min Development configuration
