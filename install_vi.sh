@@ -5,14 +5,15 @@ if [ -e ~/.vimrc -o -e ~/.vim ]; then
 	exit
 fi
 
-echo "심볼릭 릭크 생성..."
+echo "vimrc 파일 복사..."
 cp ~/devconfig/vim/vimrc ~/.vimrc
 
 echo "vundle 다운로드중..."
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 echo "solarized 설치중..."
-cp -r ~/devconfig/theme-solarized/vim-colors-solarized/colors/ ~/.vim/
+mkdir ~/.vim/colors
+cp -r ~/devconfig/theme-solarized/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 
 echo "plugin 설치..."
 cp -r ~/devconfig/vim/plugins ~/.vim/bundle/
